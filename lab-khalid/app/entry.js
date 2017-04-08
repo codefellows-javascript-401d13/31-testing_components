@@ -40,9 +40,23 @@ context.keys().forEach(key => {
 
 context = require.context('./component', true, /\.js$/);
 context.keys().forEach( key => {
-  //  console.log('k',key);
+   console.log('000000000000000000000000');
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
   cfgram.component(name, module);
 });
 
+context = require.context('./filter/', true, /\.js$/);
+context.keys().forEach( key => {
+  let name = camelcase(path.basename(key, '.js'));
+  let module = context(key);
+  console.log('name is ',name);
+  cfgram.filter(name, module);
+});
+
+context = require.context('./directive/', true, /\.js$/);
+context.keys().forEach( key => {
+  let name = camelcase(path.basename(key, '.js'));
+  let module = context(key);
+  cfgram.directive(name, module);
+});
