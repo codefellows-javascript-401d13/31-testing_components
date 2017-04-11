@@ -11,8 +11,9 @@ const
   ngTouch = require('angular-touch'),
   ngAnimate = require('angular-animate'),
   ngFileUpload = require('ng-file-upload'),
+  uiBootstrap = require('angular-ui-bootstrap'),
 
-  cfgram = angular.module('cfgram', [ngTouch, ngAnimate, uiRouter, ngFileUpload]);
+  cfgram = angular.module('cfgram', [ngTouch, ngAnimate, uiRouter, ngFileUpload, uiBootstrap]);
 
 let context = require.context('./config/', true, /\.js$/);
 // console.log('CONTEXT', context);
