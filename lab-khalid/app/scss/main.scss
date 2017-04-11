@@ -1,0 +1,11 @@
+@import './lib/header/_reset.scss';
+@import "lib/bootstrap/custom-bootstrap";
+
+@import './lib/header/header.scss';
+
+@import '../component/landing/signup/_signup.scss';
+// @import '../directive/social-icons';
+
+body {
+  background-color: $secondary-color;
+}
